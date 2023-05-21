@@ -1,0 +1,93 @@
+.layout {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 130px 10px 200px;
+  overflow-y: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-auto-rows: max-content;
+  gap: 1%;
+}
+
+.filter-drawer {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  background-color: white;
+  z-index: 100;
+  padding-inline: 20px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.button-container button {
+  width: 100%;
+}
+
+.divider {
+  height: 90%;
+  width: 1px;
+  border: none;
+  border-right: 1px solid #bdbdbd;
+}
+
+@media screen and (max-width: 768px) {
+  .filter-drawer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .layout {
+    padding-top: 70px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-auto-rows: max-content; */
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    /* grid-auto-rows: max-content; */
+  }
+}
+
+.filters-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  height: 60px;
+}
+.filters-container > div:nth-child(1) {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.drawer-filters {
+  padding: 20px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
