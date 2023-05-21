@@ -1,0 +1,57 @@
+.root {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  padding: 70px 10px 10px;
+}
+
+.app-bar {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+  }
+}
+
+.bottom-navigation {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 10px;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 200;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prizing-section,
+.button-group {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
